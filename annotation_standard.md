@@ -28,6 +28,7 @@ And the following will NOT be included:
 * The "references" section
 
 So you may want to perform any annotation you do on the parts of the paper that will be included in the test set, as that will likely result in better final performance.
+Nonetheless, we suggest you refer to the original paper during annotation, as the entire document can provide more global information and help resolve ambiguity in the local context that you are annotating.
 
 ## Method Name
 
@@ -94,6 +95,8 @@ _Tricky cases_:
 Value of the hyper-parameters, such as: "12" for L, "768" for H, etc.
 
 You might want to include the units of numbers, such as labeling "110M" instead of "110". Note that a lot of hyper-parameters descriptions are located in the appendices.
+
+All hyperparameter values annotated should be numerical values. You can ignore non-numerical hyperparameter-like values such as “Adam” used for the “optimizer” hyperparameter.
 
 _Example_: 
 
