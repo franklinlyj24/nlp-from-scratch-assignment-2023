@@ -67,6 +67,7 @@ You do not need to extract text/numbers from tables and figures.
 ### Tokenizing the Data
 
 As noted above, the inputs to your model will be tokenized using the [spacy](https://spacy.io/api/tokenizer/) tokenizer, so you should probably also tokenize the input data using this tokenizer as well.
+You are welcome to explore different settings, but we use `en-core-web-lg` model with versions 3.4~3.6 (before 3.7 was released). 
 Once you have done this, you should have a significant amount of raw data in the same input format as described above.
 
 ## Annotating Data
