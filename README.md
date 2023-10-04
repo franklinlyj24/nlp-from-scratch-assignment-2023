@@ -1,6 +1,8 @@
 # CMU Advanced NLP Assignment 2: End-to-end NLP System Building
 
-by Emmy Liu, Zora Wang, Kenneth Zheng, Lucio Dery, Abhishek Srivastava, Kundan Krishna, Graham Neubig
+by Zora Wang, Sang Choe, Sophia Chou, Bowen Tan, Saujus Vaduguru, and Daniel Fried
+
+(adapted from the previous version by Emmy Liu, Zora Wang, Kenneth Zheng, Lucio Dery, Abhishek Srivastava, Kundan Krishna, and Graham Neubig)
 
 
 So far in your machine learning classes, you may have experimented with standardized tasks and datasets that were provided and easily accessible. 
@@ -99,10 +101,6 @@ For example, you may think about ideas such as:
 2. Multi-task learning, training on different tasks at once
 3. Using prompting techniques
 
-In order to _test_ your model, you will want to use an evaluation script,
-as detailed in the [evaluation and submission](evaluation_and_submission.md) page.
-This page also explains how you can do the analysis that is a component of your report.
-
 ## System Deployment
 
 The final "deployment" of your model will consist of running your model over a private test set (text only) and submitting your results to us.
@@ -126,7 +124,7 @@ We will ask you to write a report detailing some things about your system creati
 
 There will be a 7 page limit for the report, and there is no required template. However, we encourage you to use the [ACL template](https://github.com/acl-org/acl-style-files).
 
-This will be due **October 31st** for submission via **Canvas**.
+This will be due **October 27th** for submission via **Canvas**.
 
 
 ## Grading
