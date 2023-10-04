@@ -103,7 +103,7 @@ For example, you may think about ideas such as:
 
 ## System Deployment
 
-The final "deployment" of your model will consist of running your model over a private test set (text only) and submitting your results to us.
+The final "deployment" of your model will consist of running your model over a private test set (text only) and submitting your results to us. The test set will be released shortly (between Oct 9 - 14th).
 
 When you are done running your system over this data, you will:
 1. Submit the results to **Kaggle**.
