@@ -107,21 +107,15 @@ This page also explains how you can do the analysis that is a component of your 
 
 The final "deployment" of your model will consist of running your model over a private test set (text only) and submitting your results to us.
 You should try to finish building your system before this set is released, and basically not rely on it for model training or testing.
-The test set will be released shortly (2-3 days) before the final submission deadline.
+The test set will be released shortly (between Oct 9 - 14th).
 
 When you are done running your system over this data, you will:
-1. Submit the results to **ExplainaBoard** through a submission script. 
-   See the [evaluation and submission](evaluation_and_submission.md) page.
+1. Submit the results to **Kaggle**.
 2. Submit any testing or training data that you created, as well as your code via Canvas.
 
-Both of these will be due by **October 26**. See details in grading below.
+Both of these will be due by **October 27**. See details in grading below.
 
 ### Data Release
-
-**UPDATE (Oct. 25, 2022):** The test set is now released in the `data/` directory. It contains 3 files:
-1. [anlp-sciner-test.txt](data/anlp-sciner-test.txt): The data that should be input to your system, textual format one paragraph per line.
-2. [anlp-sciner-test-withdocstart.txt](data/anlp-sciner-test-withdocstart.txt): The same data as above, but some lines start with `-DOCSTART-` to indicate that it's the start of a paper.
-3. [anlp-sciner-test-empty.conll](data/anlp-sciner-test-empty.conll): An example of the format that should be uploaded to ExplainaBoard, but with all the tags set to "O".
 
 Please run your system over these files and upload the results.
 Because the goal of this assignment is not to perform hyperparameter optimization on this test set, we ask you to not upload too many times before the submission deadline. Try to **limit to 5 submissions**, although if you go slightly over this not an issue. Teams that make more than 10 submissions may be penalized.
