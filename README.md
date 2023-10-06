@@ -79,7 +79,7 @@ Next, you will want to annotate data for two purposes: testing/analysis and trai
 _The testing/analysis data_ will be the data that you use to make sure that your system is working properly.
 In order to do so, you will want to annotate enough data so that you can get an accurate idea of how your system is doing, and if any improvements to your system are having a positive impact.
 Some guidelines:
-* **Domain Relevance:** Your test data should be similar to the data that you will finally be tested on, so we recommend that you create it from NLP papers from recent NLP conferences (e.g. ACL, EMNLP, and NAACL).
+* **Domain Relevance:** Your test data should be similar to the data that you will finally be tested on (ACL, EMNLP, and NAACL papers from 2022-2023), so we recommend that you create it from NLP papers from recent NLP conferences (e.g. ACL, EMNLP, and NAACL).
 * **Size:** Your test data should be large enough to distinguish between good and bad models. If you want some guidelines about this, please take a look at [this paper](https://arxiv.org/abs/2010.06595).
 
 For annotation, please see the separate doc that details [annotation interfaces](annotation_interface.md) that you can use.
@@ -108,6 +108,7 @@ The final "deployment" of your model will consist of running your model over a p
 When you are done running your system over this data, you will:
 1. Submit the results to **Kaggle**.
 2. Submit any testing or training data that you created, as well as your code via Canvas.
+3. We also will ask each team to, along with submitting their annotated data, submit a list of annotation contributions from each team member (e.g. teammate A: instances 1-X; teammate B: instances X-Y, teammate C: instances Y-Z).
 
 Both of these will be due by **October 27**. See details in grading below.
 
