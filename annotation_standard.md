@@ -50,13 +50,13 @@ Our O
 proposed O
 model O
 BERT B-MethodName
-(
+( O
 Bidirectional B-MethodName
 Encoder I-MethodName
 Representations I-MethodName
 from I-MethodName
 Transformers I-MethodName
-)
+) O
 outperforms O
 ELMo B-MethodName
 , O
