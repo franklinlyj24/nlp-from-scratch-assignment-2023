@@ -1,0 +1,104 @@
+import argparse
+import collections
+
+import torch
+
+import dataloader.data_loaders as module_data
+import embedding.embedding as module_embedding
+import model.loss as module_loss
+import model.metric as module_metric
+import model.model as module_arch
+from utils import ConfigParser
+from trainer import Trainer
+
+
+def main(config):
+    logger = config.get_logger("train")
+
+    # setup data_loader instances
+    train_data_loader = config.initialize(
+        "train_data_loader", module_data, **{"training": True}
+    )
+    valid_data_loader = train_data_loader.get_validation()
+
+    # pdb.set_trace()
+    # build model architecture, then print to console
+    try:
+        config["embedding"]["args"].update(
+            {"vocab": train_data_loader.dataset.vocab})
+        embedding = config.initialize("embedding", module_embedding)
+    except Exception:
+        embedding = None
+    config["arch"]["args"].update({"vocab": train_data_loader.dataset.vocab})
+    config["arch"]["args"].update({"embedding": embedding})
+    model = config.initialize("arch", module_arch)
+    logger.info(model)
+
+    # get function handles of loss and metrics
+    loss = getattr(module_loss, config["loss"])
+    metrics = [getattr(module_metric, metric) for metric in config["metrics"]]
+
+    # build optimizer, learning rate scheduler. delete every lines containing
+    # lr_scheduler for disabling scheduler
+    trainable_params = filter(lambda p: p.requires_grad, model.parameters())
+    optimizer = config.initialize("optimizer", torch.optim, trainable_params)
+
+    lr_scheduler = config.initialize(
+        "lr_scheduler", torch.optim.lr_scheduler, optimizer
+    )
+
+    trainer = Trainer(
+        model,
+        loss,
+        metrics,
+        optimizer,
+        config=config,
+        data_loader=train_data_loader,
+        valid_data_loader=valid_data_loader,
+        lr_scheduler=lr_scheduler,
+    )
+
+    trainer.train()
+
+
+if __name__ == "__main__":
+    args = argparse.ArgumentParser(
+        description="PyTorch Natural Language Processing Template"
+    )
+    args.add_argument(
+        "-c",
+        "--config",
+        default=None,
+        type=str,
+        help="config file path (default: None)",
+    )
+    args.add_argument(
+        "-r",
+        "--resume",
+        default=None,
+        type=str,
+        help="path to latest checkpoint (default: None)",
+    )
+    args.add_argument(
+        "-d",
+        "--device",
+        default=None,
+        type=str,
+        help="indices of GPUs to enable (default: all)",
+    )
+
+    # custom cli options to modify configuration from default values given in
+    # json file.
+    CustomArgs = collections.namedtuple("CustomArgs", "flags type target")
+    options = [
+        CustomArgs(
+            ["--lr", "--learning_rate"], type=float, target=("optimizer", "args", "lr")
+        ),
+        CustomArgs(
+            ["--bs", "--batch_size"],
+            type=int,
+            target=("data_loader", "args", "batch_size"),
+        ),
+    ]
+    config = ConfigParser(args, options)
+    main(config)

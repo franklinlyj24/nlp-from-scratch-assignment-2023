@@ -1,0 +1,11 @@
+numpy
+torch
+torchvision
+torchaudio
+tensorboardx
+
+datasets 
+evaluate 
+transformers 
+seqeval 
+ipywidgets
