@@ -106,7 +106,11 @@ def extract(path_data):
                         
                         sentences = nlp(text).sents
                         for sentence in sentences:
-                            ftxt.write(sentence.text + '\n')            
+                            line = []
+                            for token in sentence:
+                                line.append(token.text)
+                            line = " ".join(line)
+                            ftxt.write(line + '\n')            
                 ftxt.close()
                 
     
