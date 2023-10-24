@@ -110,12 +110,12 @@ When you are done running your system over this data, you will:
 2. Submit any testing or training data that you created, as well as your code via Canvas.
 3. We also will ask each team to, along with submitting their annotated data, submit a list of annotation contributions from each team member (e.g. teammate A: instances 1-X; teammate B: instances X-Y, teammate C: instances Y-Z).
 
-Both of these will be due by **October 27**. See details in grading below.
+Both of these will be due by **Friday, October 27**. See details in grading below.
 
 ### Data Release
 
 Please run your system over these files and upload the results.
-Because the goal of this assignment is not to perform hyperparameter optimization on this test set, we ask you to not upload too many times before the submission deadline. Try to **limit to 5 submissions**, although if you go slightly over this not an issue. Teams that make more than 10 submissions may be penalized.
+Because the goal of this assignment is not to perform hyperparameter optimization on this private test set, we ask you to not upload too many times before the submission deadline. Try to **limit to 5 submissions**, although if you go slightly over this not an issue. Teams that make more than 10 submissions may be penalized.
 
 ## Writing Report
 
@@ -123,7 +123,7 @@ We will ask you to write a report detailing some things about your system creati
 
 There will be a 7 page limit for the report, and there is no required template. However, we encourage you to use the [ACL template](https://github.com/acl-org/acl-style-files).
 
-This will be due **October 27th** for submission via **Canvas**.
+This will be due **Monday, October 30th** for submission via **Canvas**.
 
 
 ## Grading
