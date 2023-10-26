@@ -108,7 +108,9 @@ The final "deployment" of your model will consist of running your model over a p
 When you are done running your system over this data, you will:
 1. Submit the results to **Kaggle**.
 2. Submit any testing or training data that you created, as well as your code via Canvas.
-3. We also will ask each team to, along with submitting their annotated data, submit a list of annotation contributions from each team member (e.g. teammate A: instances 1-X; teammate B: instances X-Y, teammate C: instances Y-Z).
+3. We also will ask each team to, along with submitting their annotated data, submit a file listing contributions:
+- data annotation contributions from each team member (e.g. teammate A: instances 1-X; teammate B: instances X-Y, teammate C: instances Y-Z).
+- data collection (scraping, processing) and modeling contributions from each team member (e.g. teammate A: writing scripts to ..., implementing ...; teammate B ...; teammate C: )
 
 Both of these will be due by **Friday, October 27**. See details in grading below.
 
