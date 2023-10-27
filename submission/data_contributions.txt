@@ -1,7 +1,7 @@
-We downloaded acl, emnlp, cl papers from past available 5 years and annotated several papers randomly selected from each venue.
+We downloaded acl, emnlp, naacl papers from past available 5 years and annotated several papers randomly selected from each venue.
 
 Data annotation:
-Renyi Tang: acl papers; Zhenlin Wang: emnlp papers, Yinjia Liu: cl papers
+Renyi Tang: acl papers; Zhenlin Wang: emnlp papers, Yinjia Liu: naacl papers
 
 Data collection:
 Scraping: Renyi Tang
