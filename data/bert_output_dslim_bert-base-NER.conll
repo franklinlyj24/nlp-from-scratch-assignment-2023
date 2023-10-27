@@ -141,14 +141,14 @@ Parameters	O
 )	O
 .	O
 
-F1	B-MetricName
+F1	O
 scores	O
 are	O
 reported	O
 for	O
-QQP	B-TaskName
+QQP	B-MethodName
 and	O
-MRPC	B-TaskName
+MRPC	B-MethodName
 ,	O
 Spearman	O
 correlations	O
@@ -185,7 +185,7 @@ components	O
 On	O
 the	O
 official	O
-GLUE	B-DatasetName
+GLUE	B-MethodName
 leaderboard	O
 ,	O
 BERTLARGE	B-MethodName
@@ -210,13 +210,13 @@ of	O
 writing	O
 .	O
 
-MNLI	B-DatasetName
-Multi	O
+MNLI	B-MethodName
+Multi	I-MethodName
 -	O
-Genre	O
+Genre	I-MethodName
 Natural	O
 Language	O
-Inference	I-TaskName
+Inference	O
 is	O
 a	O
 large	O
@@ -265,14 +265,14 @@ first	O
 one	O
 .	O
 
-F1	B-MetricName
+F1	O
 scores	O
 are	O
 reported	O
 for	O
-QQP	B-TaskName
+QQP	B-MethodName
 and	O
-MRPC	B-TaskName
+MRPC	B-MethodName
 ,	O
 Spearman	O
 correlations	O
